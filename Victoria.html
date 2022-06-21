@@ -1,46 +1,238 @@
-<html>
-<head>
-	<style type="text/css">
-div.ex1 {
- 	width: 400px; 
- 	margin: auto; 
-}
-html {
-	height: 100%;
-	background:
-  	linear-gradient(
-    limegreen,
-    transparent
-  ),
-  linear-gradient(
-    90deg,
-    skyblue,
-    transparent
-  ),
-  linear-gradient(
-    -90deg,
-    coral,
-    transparent
-  );
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
   
-background-blend-mode: screen;
-}
-	</style>
-	<title>Гланая страница</title>	
-</head>
-<body>
-	<a align="center" href="/gitStart/index.html"><h3>Вернуться на главную</h3></a> 
+		<title>Ножи ручной работы</title>
 
-<div align="center">
-<img  src="5.jpg" width="300" height="200">
-<div class="ex1" display="flex">
-<p align="justify">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur, felis vel congue suscipit, tortor turpis euismod elit, non sollicitudin elit urna quis justo. Pellentesque eleifend faucibus nunc. Quisque vel mauris quis arcu auctor vestibulum. Integer vitae volutpat elit. Duis tincidunt magna ut nisl tempor pharetra. Fusce a felis turpis. Vestibulum dictum ac nulla vel lobortis. Etiam sed finibus mi. Sed malesuada est in consequat hendrerit. Nunc sed viverra orci. Pellentesque rhoncus a nisi vestibulum vestibulum. Maecenas ultrices tincidunt odio, non commodo odio efficitur eu. Donec accumsan arcu eget orci blandit ornare.
-</p>
-</body>
-<div>
-</div>
+	    <style type="text/css">
+			*{ 
+				box-sizing: border-box;
+			}
+	            }
+	            html, body{
+	                margin:0;
+	                padding:0;
+	            }
+	            .grid-container {
+	            	width: 80%;
+                	margin: 5px;
+	                height:100vh;
+	                display: grid;
+	                grid-template-areas: "header"
+	                                     "."
+	                                     "content"
+	                                     "."
+	                                     "sidebar"
+	                                     "."
+	                                     "footer";
+	                grid-template-columns: 1fr;
+	                grid-template-rows: 80px 5px 1fr 5px 80px 5px 80px;
+	            }
+	            .header { 
+		            	grid-area: header; 
+		            	background-color: #0A2A2A; 
+	            }
 
-	<br>
-	
+	            .content { 
+	            		grid-area: content;
+	                    background-color: #B3B7B7; 
+	                    text-align: justify;
+	                    padding: 5px;
+	                   }
+	            .sidebar { 
+		            	grid-area: sidebar; 
+		            	background-color: #EBF3F3; 
+		            	text-align: justify;
+		            }
+	            
+	            .footer { 
+		            	grid-area: footer; 
+		            	background-color: #0A2A2A; 
+	            }
+
+	            h3{ 
+	                text-align:center;
+	            }
+	           
+	                 
+	                .grid-container {
+	                    height:100vh;
+	                    width: 90%;
+	                    margin-left: 5%;
+	                    display: grid;
+	                    grid-template-areas: "header header header"
+	                                         ". . ."
+	                                         "content . sidebar"
+	                                         ". . ."
+	                                         "footer footer footer";
+	                    grid-template-columns: 60% 5px 40%;
+	                    grid-template-rows:  15% 5px 65% 5px 15%;
+	                }
+	            
+
+	                .my-site-name {
+	                	color: #EEFBFB;
+	                	font-style: italic;
+	                	font-weight: bolder;
+	                	font-size: 25px;
+	                }
+	                .ordering{
+	                	font-style: italic;
+	                	font-weight: bolder;
+	                	font-size: 20px;
+	                	color: #0A2727;
+	                }
+
+	                .new-items{
+	                	font-style: italic;
+	                	font-weight: bolder;
+	                	font-size: 20px;
+	                	color: #0C2D66;
+	                }
+
+	                .img-photo{
+	                	width: 20%;
+	                	float: left;
+	                	margin: 5px 5px 5px 0;
+	                
+	                }
+
+	                .img-photo-2{
+	                	width: 20%;
+	                	float: left;
+	                	margin: 5px 5px 5px 0;
+
+	                }
+
+	                .img-photo-3{
+	                	width: 20%;
+	                	float: left;
+	                	margin: 5px 5px 5px 0;
+       	
+	                }
+
+	                .img-photo-section-2{
+	                	margin-top: 10px;
+	                }
+
+	                .img-photo-section-3{
+	                	margin-top: 10px;
+	                }
+
+	                .symbol{
+	                	vertical-align: super;
+    					font-size: smaller;
+	                }
+
+	                .contacts-form{
+	                	display: inline-block;
+	                	width: 210px;
+	                }
+	              
+	                ul.hr li {
+					    display: inline;
+					    margin-right: 50px;
+
+                    }
+
+                    .hr{
+                    	color: #93B4EF;
+                    	font-size: 20px;
+                    	font-style: italic;
+                    	text-align: center; 
+                    }
+
+                    .contact-section {
+						color: #EEFBFB;
+	                	font-style: italic;
+	                	font-weight: bolder;
+	                	font-size: 20px;
+                    }
+
+
+
+        </style>
+	</head>
+
+	<body>
+		<div class="grid-container">
+            <div class="header">
+            	<h3 class="my-site-name">Ножи ручной работы Buriy.Ko</h3>
+            </div>
+
+            <div class="content"><h3 class="ordering">Оформление заказа</h3>
+            <p>
+            	Если Вы желаете оформить заказ, доставку каталога товаров или у Вас возникли вопросы или предложения заполните следующую форму, наш консультант свяжется с Вами, с целью предоставления более подробной информации.
+            </p>
+            <form>
+
+			<label for="type"><u>Какие типы ножей Вас интересуют</u></label>
+
+				<br><input type="checkbox" name="type1" value="kitchen knives">Кухонные ножи
+				<br><input type="checkbox" name="type2" value="hunter knives">Охотничьи ножи
+				<br><input type="checkbox" name="type3" value="knives for tourism">Ножи для туризма
+				<br><input type="checkbox" name="type4" value="all knives">Все<br>
+				
+			<br><br><label for="email" class="contacts-form"> <u>Введите Ваш е-мейл</u> <sup class="symbol"> &#9913; </sup> </label>
+				<input type="email" name="email" placeholder="Enter email" required>
+			
+			
+			
+			<br><br><label for="phone" class="contacts-form"> <u>Введите немер телефона</u> <sup class="symbol"> &#9913; </sup></label>
+				<input type="tel" id="phone" name="phone" value="380-" placeholder="380-123-45-67" pattern="[3]{1}[8]{1}[0]{1}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+				<small>Format: 380-123-45-67</small>
+
+			<br><br><input type="submit">	
+			<input type="reset">	
+			
+		</form>
+            </div>
+
+            <div class="sidebar">
+            	<h3 class="new-items">Виды ножей доступны к заказу:</h3>
+            	
+                    <p class="img-photo-section">
+                    	<img class="img-photo" src="https://img01.obyava.ua/classified/0/1365/4897/200-lyrapos2dq0jkvr2.jpg" alt="hunter knives">
+                    	Охотничьи ножи
+                    </p>
+                   
+               		<br><p class="img-photo-section-2">
+               			<img class="img-photo-2" src="https://images.ua.prom.st/2768332591_nozh-dlya-turizma.jpg" alt="knives for tourism">
+               			Ножи для туризма
+               		</p>
+               		<br><p class="img-photo-section-3">
+               			<img class="img-photo-3" src="http://ae01.alicdn.com/kf/H9217b05f8b654cb195bf2b14e47f1d77z.jpg_q50.jpg" alt="kitchen knives">
+               		Кухонные ножи
+               	    </p>
+                
+
+               
+            </div>
+
+            <div class="footer">
+            	<h3 class="contact-section" >Контакты</h3>
+            	<ul class="hr">
+                    <li>
+                    Tel.: +38 095 421 00 00   
+                    </li>
+
+                    <li>
+                    E-mail: buriy_kot@meta.ua
+                    </li>
+                    
+                    <li>
+						<a href="https://www.facebook.com/viktoriia.bondarenko.73">Facebook</a>
+					</li>
+
+                    <li>
+                    Adress: г. Херсон, Украина 
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+	</body>
 </html>
